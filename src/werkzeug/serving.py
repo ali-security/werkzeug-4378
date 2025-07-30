@@ -965,9 +965,6 @@ def run_simple(
         from .debug import DebuggedApplication
 
         application = DebuggedApplication(application, use_evalex)
-        # Allow the specified hostname to use the debugger, in addition to
-        # localhost domains.
-        application.trusted_hosts.append(hostname)
     if static_files:
         from .middleware.shared_data import SharedDataMiddleware
 
